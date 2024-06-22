@@ -1,0 +1,15 @@
+/* Extra small  <576px
+Small  ≥576px
+Medium  ≥768px
+Large  ≥992px
+Extra Large  ≥1200px
+Extra Extra Large  >=1400px */
+@media screen and (max-width:474px){
+    .nav-options-items{
+        font-size: 8px;
+    }
+    .nav-options-items img{
+        height: auto;
+        width: 18px;
+    }
+}

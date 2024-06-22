@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make My Trip</title>
+  <link rel="stylesheet" href="static/styles/index.css" />
+  <link rel="stylesheet" href="static/styles/media.css" />
+</head>
+
+<body>
+  <div class="main">
+    <!-- nav-1 starting -->
+    <div class="nav-1">
+      <div class="mmt-logo"><img src="static/images/mmtLogo.png" /></div>
+      <div class="nav-options">
+        <div class="nav-options-items">
+          <img src="static/images/rent.png" />
+          <span>List Your Property</span>
+        </div>
+        <div class="nav-options-items">
+          <img src="static/images/shopping-bag.png" />
+          <span>Introducing myBiz</span>
+        </div>
+        <div class="nav-options-items">
+          <img src="static/images/suitcase-alt.png" />
+          <span>My Trips</span>
+        </div>
+        <div class="nav-options-items">
+          <img src="static/images/circle-t.png" />
+          <span>Hi Traveller</span>
+        </div>
+      </div>
+    </div>
+    <!-- nav-1 ending -->
+    <!-- nav-2 starting -->
+    <div class="nav-2">
+      <div class="nav-2-items">
+        <img src="static/images/icons8-flight-96.png" />
+        <div>Flights</div>
+      </div>
+      <div class="nav-2-items">
+        <img src="static/images/icons8-hotel-building-64.png" />
+        <div>Hotels</div>
+      </div>
+      <div class="nav-2-items">
+        <img src="static/images/icons8-homes-64.png" />
+        <div>Home Stays</div>
+        <div>& Villas</div>
+      </div>
+      <div class="nav-2-items">
+        <img src="static/images/icons8-umbrella-80.png" />
+        <div>Holiday</div>
+        <div>Packages</div>
+      </div>
+      <div class="nav-2-items">
+        <img src="static/images/icons8-train-64.png" />
+        <div>Trains</div>
+      </div>
+      <div class="nav-2-items">
+        <img src="static/images/icons8-bus-80.png" />
+        <div>Buses</div>
+      </div>
+      <div class="nav-2-items">
+        <img src="static/images/icons8-cab-80.png" />
+        <div>Cabs</div>
+      </div>
+      <div class="nav-2-items">
+        <img src="static/images/icons8-cash-64.png" />
+        <div>Forex Card</div>
+        <div>& Currency</div>
+      </div>
+      <div class="nav-2-items">
+        <img src="static/images/icons8-medical-insurance-96.png" />
+        <div>Travel</div>
+        <div>Insurance</div>
+      </div>
+    </div>
+    <!-- nav-2 ending -->
+    <!-- form starting -->
+    <div class="form-div">
+      <div class="options-div">
+        <div>
+          <input type="radio" value="One Way" />One Way
+          <input type="radio" value="Round Trip" />Round Trip
+          <input type="radio" value="Multi City" />Multi City
+        </div>
+        <div>Book International and Domestic Flights</div>
+      </div>
+      <div class="flights">
+        <div class="from">
+          <div>From</div>
+          <div id="from-inputField" class="from-inputField">
+            <h2 id="from-airport-city">Mumbai, India</h2>
+            <p id="from-airport-name" class="small">
+              Chhatrapati Shivaji International Airport
+            </p>
+          </div>
+          <div id="from-dropdown" class="dropdown"></div>
+        </div>
+
+        <div class="to">
+          <div>To</div>
+          <div id="to-inputField">
+            <h2 id="to-airport-city">Bengaluru, India</h2>
+            <p id="to-airport-name" class="small">
+              Kempegowda International Airport
+            </p>
+          </div>
+          <div id="to-dropdown" class="dropdown"></div>
+        </div>
+
+        <div class="departure">
+          <div>Departure</div>
+          <h4 id="date"></h4>
+          <p id="weekday"></p>
+          <div class="calendar">
+            <input type="date" id="departure-date" />
+          </div>
+        </div>
+
+        <div class="return">
+          <div>Return</div>
+          <h4 id="return-date"></h4>
+          <p id="return-weekday"></p>
+          <div class="return-calendar">
+            <input type="date" id="return-date-input" />
+          </div>
+        </div>
+
+        <div class="travellers">
+          <div>Travellers & Class</div>
+          <h3 id="traveller">1 Traveller</h3>
+          <p id="travel-class" class="small">Economy/Premium Economy</p>
+          <div class="traveller-details">
+            <div>ADULTS</div>
+            <div class="small">on the day of travel</div>
+            <div>
+              <div class="number">
+                <button onclick="updateTravelers(1)">1</button>
+                <button onclick="updateTravelers(2)">2</button>
+                <button onclick="updateTravelers(3)">3</button>
+                <button onclick="updateTravelers(4)">4</button>
+                <button onclick="updateTravelers(5)">5</button>
+                <button onclick="updateTravelers(6)">6</button>
+                <button onclick="updateTravelers(7)">7</button>
+                <button onclick="updateTravelers(8)">8</button>
+                <button onclick="updateTravelers(9)">9</button>
+              </div>
+            </div>
+            <div>CHILDREN (2y - 12y )</div>
+            <div class="small">on the day of travel</div>
+            <div class="number">
+              <button onclick="updateTravelers(1)">1</button>
+              <button onclick="updateTravelers(2)">2</button>
+              <button onclick="updateTravelers(3)">3</button>
+              <button onclick="updateTravelers(4)">4</button>
+              <button onclick="updateTravelers(5)">5</button>
+              <button onclick="updateTravelers(6)">6</button>
+            </div>
+            <div>INFANTS (below 2y)</div>
+            <div class="small">on the day of travel</div>
+            <div class="number">
+              <button onclick="updateTravelers(1)">1</button>
+              <button onclick="updateTravelers(2)">2</button>
+              <button onclick="updateTravelers(3)">3</button>
+              <button onclick="updateTravelers(4)">4</button>
+              <button onclick="updateTravelers(5)">5</button>
+              <button onclick="updateTravelers(6)">6</button>
+              <button onclick="updateTravelers(7)">7</button>
+            </div>
+            <div>CHOOSE TRAVEL CLASS</div>
+            <div class="number">
+              <button class="small" onclick="updateclass('Economy/Premium Economy')">Economy/Premium Economy</button>
+              <button class="small" onclick="updateclass('Premium Economy')">Premium Economy</button>
+              <button class="small" onclick="updateclass('Business')">Bussiness</button>
+            </div>
+            <div><button onclick="apply()">Apply</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="special-fare">
+        <h3>Select a Special Fare</h3>
+        <div><button class="flex-row">
+            <input type="radio" />
+            <div class="flex-column">
+              <div>Regular</div>
+              <div class="small">regular fare</div>
+            </div>
+          </button></div>
+        <div><button class="flex-row">
+            <input type="radio" />
+            <div class="flex-column">
+              <div>Student</div>
+              <div class="small">extra discounts/baggage</div>
+            </div>
+          </button></div>
+        <div>
+          <button class="flex-row">
+            <input type="radio" />
+            <div class="flex-column">
+              <div>Senior Citizen</div>
+              <div class="small">upto 600 off</div>
+            </div>
+          </button>
+        </div>
+        <div>
+          <button class="flex-row">
+            <input type="radio" />
+            <div class="flex-column">
+              <div>Armed Forces</div>
+              <div class="small">upto 600 off</div>
+            </div>
+          </button>
+        </div>
+        <div>
+          <button class="flex-row">
+            <input type="radio" />
+            <div class="flex-column">
+              <div>Doctor and Nurses</div>
+              <div class="small">upto 600 off</div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <center><button class="flight-search">SEARCH</button></center>
+    </div>
+    <!-- form ending -->
+    <!-- offers starting -->
+
+    <div class="offers">
+      <div class="offer-options">
+        <div><a href="#">On 1st Booking</a></div>
+        <div><a href="#">All Offers</a></div>
+        <div><a href="#">Flights</a></div>
+        <div><a href="#">Hotels</a></div>
+        <div><a href="#">Holidays</a></div>
+        <div><a href="#">Trains</a></div>
+        <div><a href="#">Cabs</a></div>
+        <div><a href="#">Bank Offers</a></div>
+      </div>
+      <div class="offer-cards">
+        <div class="offer-card">
+          <img src="static/images/people-in-airport.jpg" width="40%">
+          <div class="offer-desc">
+            <h4>For Your 1st Intl Flight Booking</h4>
+            <div>Grab FLAT 10% off</div>
+            <p>Code: WELCOMEMMT</p>
+            <button class="offer-button">View Details</button>
+          </div>
+        </div>
+        <div class="offer-card">
+          <img src="static/images/women-in-bus.jpg" width="40%">
+          <div class="offer-desc">
+            <h4>For Your 1st Bus Booking</h4>
+            <div>Grab FLAT 10% off</div>
+            <p>Code: WELCOMEMMT</p>
+            <button class="offer-button">View Details</button>
+          </div>
+        </div>
+        <div class="offer-card">
+          <img src="static/images/women-in-hotel.jpg" width="40%">
+          <div class="offer-desc">
+            <h4>For Your 1st Hotel Booking</h4>
+            <div>Upto 20% off</div>
+            <p>Code: WELCOMEMMT</p>
+            <button class="offer-button">View Details</button>
+          </div>
+        </div>
+        <div class="offer-card">
+          <img src="static/images/people-in-railway-station.jpg" width="40%">
+          <div class="offer-desc">
+            <h4>Zero Convinience Fee</h4>
+            <div>Grab FLAT 10% off</div>
+            <p>Code: WELCOMEMMT</p>
+            <button class="offer-button">View Details</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  <!-- offers ending -->
+   <!--Different Flights starting-->
+   <div class="different-flights">
+    <div class="flight-city">
+      <img src="static/images/chennai-beach.jpg" width="40px" style="border-radius:50%">
+      <div class="flight-desc">
+        <div>Chennai Flights</div>
+        <div class="small">Via - Delhi, Mumbai, Coimbatore, Madurai</div>
+      </div>
+    </div>
+    <div class="flight-city">
+      <img src="static/images/goa.jpg" width="40px" style="border-radius:50%">
+      <div class="flight-desc">
+        <div>Goa Flights</div>
+        <div class="small">Via - Delhi , Mumbai, Bangalore, Ahmedabad</div>
+      </div>
+    </div>
+    <div class="flight-city">
+      <img src="static/images/mumbai.jpg" width="40px" style="border-radius:50%">
+      <div class="flight-desc">
+        <div>Mumbai Flights</div>
+        <div class="small">Via - Delhi, Bangalore, Chennai, Ahmedabad</div>
+      </div>
+    </div>
+    <div class="flight-city">
+      <img src="static/images/charminar.jpg" width="40px" style="border-radius:50%">
+      <div class="flight-desc">
+        <div>Hyderabad Flights</div>
+        <div class="small">Via - Chennai, Mumbai, Bangalore, Delhi</div>
+      </div>
+    </div>
+    <div class="flight-city">
+      <img src="static/images/red-fort.avif" width="40px" style="border-radius:50%">
+      <div class="flight-desc">
+        <div>Delhi Flights</div>
+        <div class="small">Via - Mumbai, Pune, Bangalore, Chennai</div>
+      </div>
+    </div>
+    <div class="flight-city">
+      <img src="static/images/pune.avif" width="40px" style="border-radius:50%">
+      <div class="flight-desc">
+        <div>Pune Flights</div>
+        <div class="small">Via - Delhi, Bangalore, Chennai, Ahmedabad</div>
+      </div>
+    </div>
+    <div class="flight-city">
+      <img src="static/images/kolkata.avif" width="40px" style="border-radius:50%">
+      <div class="flight-desc">
+        <div>Kolkata Flights</div>
+        <div class="small">Via - Delhi, Mumbai, Bangalore, Pune</div>
+      </div>
+    </div>
+    <div class="flight-city">
+      <img src="static/images/bangalore.avif" width="40px" style="border-radius:50%">
+      <div class="flight-desc">
+        <div>Bangalore Flights</div>
+        <div class="small">Via - Delhi, Pune, Mumbai, Kolkata</div>
+      </div>
+    </div>
+    <div class="flight-city">
+      <img src="static/images/jaipur.avif" width="40px" style="border-radius:50%">
+      <div class="flight-desc">
+        <div>Jaipur Flights</div>
+        <div class="small">Via - Mumbai, Delhi, Pune, Bangalore</div>
+      </div>
+    </div>
+
+   </div>
+   <!--Different Flights Ending-->
+   <!--about start-->
+   <div class="about">
+    <div class="small">
+      <p>PRODUCT OFFERING</p>
+      <div>Flights, International Flights, Charter Flights, Hotels, International Hotels, Homestays and Villas, Activities, Holidays In India, 
+      International Holidays, Book Hotels From UAE, myBiz for Corporate Travel, Book Online Cabs, Book Bus Tickets, Book Train Tickets, 
+      Cheap Tickets to India, Book Flights From US, Book Flights From UAE, Trip Planner, Gift Cards, Gift, Wedding Gift, Anniversary Gift, 
+      Birthday Gift, Diwali Gift, Valentines Gift, Farewell Gift, Christmas Gift, New Year Gift, Trip Money, Trip Ideas, Travel Blog, PNR Status, 
+      MakeMyTrip Advertising Solutions, One Way Cab</div>
+    </div>
+    <div class="small">
+      <p>MAKEMYTRIP</p>
+      <div>About Us, Investor Relations, Careers, MMT Foundation, Legal Notices, CSR Policy, myPartner - Travel Agent Portal, Foreign 
+        Exchange, List your hotel, Partners- Redbus, Partners- Goibibo, Advertise with Us</div>
+    </div>
+    <div class="small">
+      <p>ABOUT THE SITE</p>
+      <div>Customer Support, Payment Security, Privacy Policy, Cookie Policy, User Agreement, Terms of Service, More Offices, Make A Payment,
+         Work From Home, Escalation Channel</div>
+    </div>
+    <div class="small">
+      <p>QUICK LINKS</p>
+      <div>
+        Flights Discount Coupons, Domestic Airlines, Indigo Airlines, Air Asia, SpiceJet, GoAir, Air India, Air India Express, 
+        Vistara, New Delhi Mumbai Flights, Pune Delhi Flights, Delhi Chennai Flights, Delhi Guwahati Flights, Mumbai Varanasi Flights,
+         Guwahati Delhi Flights, Goa Delhi Flights, Delhi Goa Flights, Delhi Chennai Flights</div>
+    </div>
+    <div class="small">
+      <p>IMPORTANT LINKS</p>
+      <div>
+        Cheap Flights, Flight Status, Chennai Mumbai flights, Mumbai Hyderabad flights, Hyderabad Bangalore flights, Pune Bangalore 
+        flights, Mumbai Jaipur flights, Mumbai Chandigarh flights, Bangalore Kolkata flights, Hyderabad Visakhapatnam flights, Chandigarh 
+        Bangalore flights, Jaipur Mumbai flights, Mumbai Shirdi Flights, Delhi to Tirupati Flight, Indore to Mumbai Flight, Kolkata to Rupsi Flight,
+         Rupsi to Guwahati Flight, Pasighat to Guwahati Flight, Delhi to Khajuraho flight, Cochin to Agatti Island Flight</div>
+    </div>
+    <div class="small">
+      <p>CORPORATE TRAVEL</p>
+      <div>
+        Corporate Travel, Corporate Hotel Booking, Corporate Flight Booking, Business Travel for SME, GST Invoice for
+         International flights, Business Travel Solutions, GST Invoice for Bus, Corporate Bus booking, myBiz - Best Business 
+         Travel Platform, GST Invoice for Flights, GST Invoice for Corporate Travel, GST Invoice for Hotels, myBiz for Small 
+         Business, Free cancellation on International Flights</div>
+    </div>
+   </div>
+   <!--about ending-->
+   <!--Question and answer starting-->
+   <div class="ques-ans">
+    <div class="ques-ans-1">
+      <p>Q - How do I make a flight booking on MakeMyTrip?</p>
+      <div class="small">A: You can book a flight on MakeMyTrip in five easy steps: Head over to the MakeMyTrip flight booking page, 
+        Enter your departure and arrival destinations, Select your air travel dates, Choose from our wide range of cheap flights based on your 
+        airfare preferences, Click on 'Book Now' and your air flight booking is done. Alternatively, you can also use the MakeMyTrip app for 
+        your flight ticket booking. </div>
+    </div>
+    <div class="ques-ans-1">
+      <p>Q - Can I avail domestic flight offers on MakeMyTrip?</p>
+      <div class="small">A: Of course, you can. While making domestic flight bookings, you can avail any special offer that is active at that time.
+         In accordance with the offer selected, a listing of eligible cheapest flights would show up on your screen. You can then apply the price 
+         filter and click on the downwards arrow, following which budget-friendly flights would start showing up in ascending order from the top
+          (lowest price on top).</div>
+    </div>
+    <div class="ques-ans-1">
+      <p>Q - How can I avail budget air tickets on MakeMyTrip?</p>
+      <div class="small">A: It's super-easy to avail budget airfare while booking your cheap flight tickets on MakeMyTrip. 
+        Just select the 'Price' filter once the available flight options are displayed and adjust according to your convenience. 
+        On the MakeMyTrip app, you can select the downward arrow, which will show the lowest airfare at the top and continue downward 
+        in ascending order.</div>
+    </div>
+    <div class="ques-ans-1">
+      <p>Q - Why could I not avail the flight booking offers at the time of checkout?</p>
+      <div class="small">A: MakeMyTrip makes use of a world-class real-time reservation database to list airfare and availability.
+         As dynamic changes in airfare take place, or the available flight tickets sell out, the database reflects the changes in real-time. 
+         Hence, we suggest, you double-check online flight booking prices when purchasing flight tickets, as the airfare might have been 
+         dynamically updated since you first selected the air travel dates or planned your itinerary.</div>
+    </div>
+   </div>
+   <!--Question and answer ending-->
+   <!--footer-->
+   <div class="footer">
+    <div class="social links">
+      <a href=""><img src="static/images/twitter.png" width="20px"></a>
+      <a href=""><img src="static/images/facebook-app-symbol.png" width="20px"></a>
+      <a href=""><img src="static/images/instagram.png" width="20px"></a>
+    </div>
+    <div>
+      <p>&copy; 2024 MAKEMYTRIP PVT. LTD.</p>
+      <p>Country India USA UAE</p>
+    </div>
+   </div>
+   <!--footer-->
+  <script src="static/scripts/index.js"></script>
+</body>
+
+</html>
